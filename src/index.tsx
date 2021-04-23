@@ -9,7 +9,7 @@ import axios from 'axios'
 
 const env = process.env.NODE_ENV
 axios.defaults.baseURL =
-  env !== 'development' ? 'http://localhost:5000' : 'https://dev.mlem-mlem.net'
+  env === 'development' ? 'http://localhost:5000' : 'https://dev.mlem-mlem.net'
 
 ReactDOM.render(
   <React.StrictMode>

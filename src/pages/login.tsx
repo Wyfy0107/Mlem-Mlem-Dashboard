@@ -54,8 +54,10 @@ export default function SignIn() {
   const responseGoogle = async (
     response: GoogleLoginResponse | GoogleLoginResponseOffline
   ) => {
-    const res = response as GoogleLoginResponse
-    const tokenId = res.tokenObj.id_token
+    const res = response as GoogleLoginResponse | null
+    const tokenId = res?.tokenObj?.id_token
+    if (!tokenId) return
+
     const { data } = await axios.post('/login/google', { id_token: tokenId })
     setToken(data.token)
   }
