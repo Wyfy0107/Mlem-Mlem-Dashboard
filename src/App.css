@@ -1,5 +1,6 @@
 body {
+  font-family: "Poiret One", cursive;
+  background-image: url(./Img/1.jpg);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
-  font-family: "Poiret One", cursive;
 }
